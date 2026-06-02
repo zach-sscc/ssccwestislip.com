@@ -801,6 +801,13 @@ blockquote {
 .upk-note p strong { color: var(--white); }
 
 /* === CONTACT PAGE === */
+.map-embed {
+  margin-top: 2rem;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--cream-dark);
+}
+
 .map-placeholder {
   margin-top: 2rem;
   height: 220px;
