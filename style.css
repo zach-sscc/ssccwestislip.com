@@ -15,7 +15,10 @@
   --white: #ffffff;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -23,6 +26,7 @@ body {
   background: var(--white);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  overscroll-behavior: auto;
 }
 
 h1, h2, h3 {
@@ -577,6 +581,7 @@ footer .logo-sub {
 }
 
 @media (max-width: 600px) {
+  .hero { min-height: unset; }
   .hero h1 { font-size: 2.2rem; }
   .hero-content { padding: 4rem 1.5rem; }
   .hero-actions { flex-direction: column; align-items: stretch; gap: 0.75rem; }
