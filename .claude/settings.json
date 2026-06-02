@@ -1,0 +1,3 @@
+{
+  "instructions": "IMPORTANT: Never push directly to main. Always create a feature branch, verify the preview looks correct with screenshots, then open a PR for review. Branch naming: feature/description or fix/description. Always screenshot affected pages before opening the PR."
+}
