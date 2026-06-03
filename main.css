@@ -1124,12 +1124,11 @@ footer .logo-sub {
   position: absolute;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 8rem;
+  font-size: 6rem;
   line-height: 1;
-  color: rgba(45,74,62,0.07);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  color: rgba(45,74,62,0.08);
+  top: 1rem;
+  right: 1rem;
   pointer-events: none;
   user-select: none;
   letter-spacing: -0.03em;
