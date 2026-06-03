@@ -173,7 +173,12 @@
       errorBanner.style.display = 'none';
 
       try {
+        const inquirySelect = document.getElementById('inquiry');
+        const inquiryText = inquirySelect.value
+          ? inquirySelect.options[inquirySelect.selectedIndex].text
+          : 'General Inquiry';
         const data = new FormData(form);
+        data.append('_subject', `New Website Inquiry - ${inquiryText}`);
         const response = await fetch('https://formspree.io/f/xgobwjdp', {
           method: 'POST',
           body: data,
@@ -190,6 +195,7 @@
         }
       } catch (err) {
         errorBanner.style.display = 'block';
+        requestAnimationFrame(() => errorBanner.scrollIntoView({ behavior: 'smooth', block: 'center' }));
         btnText.style.display = 'inline';
         btnSpinner.style.display = 'none';
         submitBtn.disabled = false;
