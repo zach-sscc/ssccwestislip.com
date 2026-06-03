@@ -800,6 +800,63 @@ blockquote {
 .upk-note p { color: rgba(255,255,255,0.72); font-size: 0.95rem; flex: 1; min-width: 280px; }
 .upk-note p strong { color: var(--white); }
 
+/* === FORM FEEDBACK === */
+.form-success-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  background: #f0f7f4;
+  border: 1px solid #a8d5c2;
+  border-radius: 6px;
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  animation: slideIn 0.35s ease;
+}
+.form-success-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  background: var(--green);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.form-success-banner strong { color: var(--green); display: block; margin-bottom: 0.25rem; }
+.form-success-banner p { color: var(--gray); font-size: 0.92rem; margin: 0; }
+
+.form-error-banner {
+  background: #fdf2f2;
+  border: 1px solid #f5c6c6;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.92rem;
+  color: #c0392b;
+  animation: slideIn 0.3s ease;
+}
+.form-error-banner a { color: #c0392b; font-weight: 600; }
+
+.field-error {
+  display: none;
+  font-size: 0.78rem;
+  color: #c0392b;
+  margin-top: 0.3rem;
+}
+.form-group.has-error input,
+.form-group.has-error textarea {
+  border-color: #e74c3c;
+}
+.form-group.has-error .field-error { display: block; }
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* === CONTACT PAGE === */
 .map-embed {
   margin-top: 2rem;
