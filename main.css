@@ -2,8 +2,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --green: #2d4a3e;
-  --green-mid: #3d6b58;
+  --green: #3b7ca8;
+  --green-mid: #5596c0;
   --blue: #4a6580;
   --sand: #c9a96e;
   --sand-light: #e8d5b0;
@@ -92,8 +92,14 @@ header {
   top: 0;
   z-index: 100;
   background: var(--white);
-  border-bottom: 1px solid var(--cream-dark);
 }
+
+/* --- Nav wave bottom edge --- */
+.nav-wave {
+  display: block;
+  line-height: 0;
+}
+.nav-wave svg { display: block; width: 100%; }
 
 .nav-inner {
   max-width: 1120px;
@@ -447,7 +453,7 @@ nav a:hover { color: var(--green); }
 
 /* === ENROLLMENT === */
 .enrollment-section {
-  background: #1a2e27;
+  background: #1a4a6e;
   padding: 7rem 2rem;
 }
 
