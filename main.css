@@ -200,7 +200,6 @@ nav a:hover { color: var(--green); }
 /* === TRUST BAR === */
 .trust-bar {
   background: var(--cream-dark);
-  border-bottom: 1px solid #ddd9d0;
 }
 
 .trust-inner {
@@ -1092,7 +1091,6 @@ footer .logo-sub {
 .wave-wrap {
   display: block;
   line-height: 0;
-  background: var(--green);
 }
 .wave-wrap svg { display: block; width: 100%; }
 
