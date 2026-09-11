@@ -21,7 +21,15 @@
       <nav>
         <ul>
           <li><a href="about.html">About</a></li>
-          <li><a href="programs.html" class="nav-active">Programs</a></li>
+          <li class="has-dropdown"><a href="programs.html" class="nav-active">Programs</a>
+            <ul class="nav-dropdown">
+              <li><a href="programs.html#infant">Infant Care</a></li>
+              <li><a href="programs.html#toddler">Toddler</a></li>
+              <li><a href="programs.html#preschool">Preschool</a></li>
+              <li><a href="programs.html#upk">Pre-K &amp; UPK</a></li>
+              <li><a href="programs.html#aftercare">Before &amp; After Care</a></li>
+            </ul>
+          </li>
           <li><a href="enrollment.html">Enrollment</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -32,7 +40,15 @@
   <div class="mobile-nav" id="mobile-nav">
     <ul>
       <li><a href="about.html">About</a></li>
-      <li><a href="programs.html" class="nav-active">Programs</a></li>
+      <li class="has-mobile-dropdown"><a href="programs.html" class="nav-active">Programs <span class="mobile-dropdown-arrow">&#9660;</span></a>
+        <ul class="mobile-sub">
+          <li><a href="programs.html#infant">Infant Care</a></li>
+          <li><a href="programs.html#toddler">Toddler</a></li>
+          <li><a href="programs.html#preschool">Preschool</a></li>
+          <li><a href="programs.html#upk">Pre-K &amp; UPK</a></li>
+          <li><a href="programs.html#aftercare">Before &amp; After Care</a></li>
+        </ul>
+      </li>
       <li><a href="enrollment.html">Enrollment</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="contact.html" class="mobile-nav-cta">Schedule a Tour</a></li>
@@ -278,23 +294,49 @@
           t.setAttribute('aria-expanded','false');
         });
       });
+      // Mobile Programs dropdown toggle
+      var ddTrigger = n.querySelector('.has-mobile-dropdown > a');
+      if(ddTrigger){
+        ddTrigger.addEventListener('click',function(e){
+          var li = ddTrigger.closest('.has-mobile-dropdown');
+          var sub = li.querySelector('.mobile-sub');
+          if(sub){
+            e.preventDefault();
+            li.classList.toggle('open');
+            sub.classList.toggle('open');
+          }
+        });
+      }
     })();
   </script>
   <script>
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabPanels = document.querySelectorAll('.tab-panel');
-    tabBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        tabBtns.forEach(b => b.classList.remove('active'));
-        tabPanels.forEach(p => p.classList.remove('active'));
+
+    function activateTab(tabId) {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabPanels.forEach(p => p.classList.remove('active'));
+      const btn = document.querySelector('.tab-btn[data-tab="' + tabId + '"]');
+      const panel = document.getElementById('tab-' + tabId);
+      if (btn && panel) {
         btn.classList.add('active');
-        document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+        panel.classList.add('active');
         const nav = btn.closest('.tab-nav');
         const navRect = nav.getBoundingClientRect();
         const btnRect = btn.getBoundingClientRect();
         nav.scrollTo({ left: nav.scrollLeft + btnRect.left - navRect.left - (nav.clientWidth - btn.offsetWidth) / 2, behavior: 'smooth' });
-      });
+      }
+    }
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => activateTab(btn.dataset.tab));
     });
+
+    // Activate tab from URL hash on load
+    const hash = window.location.hash.replace('#', '');
+    if (hash && document.querySelector('.tab-btn[data-tab="' + hash + '"]')) {
+      activateTab(hash);
+    }
   </script>
 
 </body>

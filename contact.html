@@ -21,7 +21,15 @@
       <nav>
         <ul>
           <li><a href="about.html">About</a></li>
-          <li><a href="programs.html">Programs</a></li>
+          <li class="has-dropdown"><a href="programs.html">Programs</a>
+            <ul class="nav-dropdown">
+              <li><a href="programs.html#infant">Infant Care</a></li>
+              <li><a href="programs.html#toddler">Toddler</a></li>
+              <li><a href="programs.html#preschool">Preschool</a></li>
+              <li><a href="programs.html#upk">Pre-K &amp; UPK</a></li>
+              <li><a href="programs.html#aftercare">Before &amp; After Care</a></li>
+            </ul>
+          </li>
           <li><a href="enrollment.html">Enrollment</a></li>
           <li><a href="contact.html" class="nav-active">Contact</a></li>
         </ul>
@@ -32,7 +40,15 @@
   <div class="mobile-nav" id="mobile-nav">
     <ul>
       <li><a href="about.html">About</a></li>
-      <li><a href="programs.html">Programs</a></li>
+      <li class="has-dropdown"><a href="programs.html">Programs</a>
+            <ul class="nav-dropdown">
+              <li><a href="programs.html#infant">Infant Care</a></li>
+              <li><a href="programs.html#toddler">Toddler</a></li>
+              <li><a href="programs.html#preschool">Preschool</a></li>
+              <li><a href="programs.html#upk">Pre-K &amp; UPK</a></li>
+              <li><a href="programs.html#aftercare">Before &amp; After Care</a></li>
+            </ul>
+          </li>
       <li><a href="enrollment.html">Enrollment</a></li>
       <li><a href="contact.html" class="nav-active">Contact</a></li>
       <li><a href="contact.html" class="mobile-nav-cta">Schedule a Tour</a></li>
@@ -179,6 +195,19 @@
           t.setAttribute('aria-expanded','false');
         });
       });
+      // Mobile Programs dropdown toggle
+      var ddTrigger = n.querySelector('.has-mobile-dropdown > a');
+      if(ddTrigger){
+        ddTrigger.addEventListener('click',function(e){
+          var li = ddTrigger.closest('.has-mobile-dropdown');
+          var sub = li.querySelector('.mobile-sub');
+          if(sub){
+            e.preventDefault();
+            li.classList.toggle('open');
+            sub.classList.toggle('open');
+          }
+        });
+      }
     })();
   </script>
   <script>
