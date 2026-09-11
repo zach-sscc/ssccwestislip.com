@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="stylesheet" href="main.css?v=5" />
+  <link rel="stylesheet" href="main.css?v=3" />
 </head>
 <body>
 
@@ -28,17 +28,7 @@
         </ul>
       </nav>
       <a href="contact.html" class="nav-cta">Schedule a Tour</a>
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
-  <div class="mobile-nav" id="mobile-nav">
-    <ul>
-      <li><a href="about.html">About</a></li>
-      <li><a href="programs.html">Programs</a></li>
-      <li><a href="enrollment.html">Enrollment</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="contact.html" class="mobile-nav-cta">Schedule a Tour</a></li>
-    </ul>
-  </div>
   <div class="nav-wave">
     <svg viewBox="0 0 1440 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" height="14"><path d="M0,0 L1440,0 L1440,4 C1080,14 360,14 0,4 Z" fill="#ffffff"/></svg>
   </div>
@@ -80,23 +70,23 @@
   <div class="trust-bar">
     <div class="trust-inner">
       <div class="trust-item fade-up">
-        <strong>Infant – Pre-K</strong>
-        <span>Exceptional care &amp; meaningful education</span>
+        <strong>Licensed &amp; Certified</strong>
+        <span>NYS Office of Children &amp; Family Services</span>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item fade-up d1">
-        <strong>Universal Pre-K</strong>
-        <span>Enriching academic experience for WIUFSD students</span>
+        <strong>Infant – Grade 5</strong>
+        <span>Full range of care &amp; education</span>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item fade-up d2">
-        <strong>School Age Before &amp; After Care</strong>
-        <span>Transportation provided for WIUFSD students</span>
+        <strong>West Islip, NY</strong>
+        <span>350 Higbie Lane</span>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item fade-up d3">
-        <strong>Licensed &amp; Certified</strong>
-        <span>NYS OCFS, MAT, &amp; CPR certified</span>
+        <strong>Family Owned</strong>
+        <span>Rooted in the community</span>
       </div>
     </div>
   </div>
@@ -118,7 +108,7 @@
         <div class="about-text fade-up d1">
           <p class="eyebrow">Our Story</p>
           <h2>A Foundation Built on<br />Trust &amp; Care</h2>
-          <p>South Shore Children's Center of West Islip has proudly served families in our community for many years, providing a safe, nurturing, and engaging environment where children can learn, grow, and build confidence. We recognize the importance of the early childhood years and are committed to creating meaningful experiences that support each child's development, curiosity, and individual strengths.</p>
+          <p>South Shore Children's Center of West Islip has been a cornerstone of our community for years — a place where children feel safe, curious, and genuinely celebrated. We believe that early childhood is the most important window in a person's life, and we take that responsibility seriously.</p>
           <p>Our dedicated staff creates an environment that blends nurturing warmth with purposeful learning, giving every child the confidence and skills to thrive now and in the years ahead.</p>
           <a href="about.html" class="btn btn-primary">Meet Our Team</a>
         </div>
@@ -251,9 +241,9 @@
     <div class="container enrollment-inner">
       <div class="enrollment-text">
         <p class="eyebrow light fade-up">Join Our Community</p>
-        <h2 class="fade-up d1">Now Enrolling for<br />the <span id="school-year"></span> Year</h2>
-        <p class="fade-up d2">Our center has limited availability for the current school year. If you are interested in joining our center, please call to speak with someone on our administration team.</p>
-        <a href="tel:6313761234" class="btn btn-sand fade-up d3">Get in Touch</a>
+        <h2 class="fade-up d1">Now Enrolling for<br />the 2025–2026 Year</h2>
+        <p class="fade-up d2">Spaces fill quickly. We invite you to schedule a tour and experience South Shore Children's Center for yourself.</p>
+        <a href="#contact" class="btn btn-sand fade-up d3">Schedule a Tour</a>
       </div>
     </div>
   </section>
@@ -287,12 +277,11 @@
           <div class="contact-detail">
             <span class="detail-label">Follow Us</span>
             <a href="https://www.facebook.com/p/South-Shore-Childrens-Center-of-West-Islip-Inc-100063511602682/" target="_blank">Facebook</a>
-            <a href="https://www.instagram.com/sscc.westislip/" target="_blank">Instagram</a>
           </div>
         </div>
       </div>
       <form class="contact-form" action="https://formspree.io/f/xgobwjdp" method="POST">
-        <input type="hidden" name="_subject" value="New Inquiry — Homepage Contact Form" />
+        <input type="hidden" name="_subject" value="New Website Inquiry - Homepage Contact" />
         <div class="form-row">
           <div class="form-group">
             <label for="name">Your Name</label>
@@ -308,24 +297,8 @@
           <input type="tel" id="phone" name="phone" />
         </div>
         <div class="form-group">
-          <label for="dob">Child's Date of Birth</label>
-          <input type="date" id="dob" name="dob" />
-        </div>
-        <div class="form-group">
-          <label for="program">Program Interest</label>
-          <select id="program" name="program">
-            <option value="">Select a program...</option>
-            <option value="infants-full-day">Infants – Full Day</option>
-            <option value="toddler-half-day">Toddler – Half Day</option>
-            <option value="toddler-full-day">Toddler – Full Day</option>
-            <option value="preschool-half-day">Preschool – Half Day</option>
-            <option value="preschool-full-day">Preschool – Full Day</option>
-            <option value="prek-full-day">Pre-K – Full Day</option>
-            <option value="upk">Universal Pre-K</option>
-            <option value="upk-extended">Universal Pre-K Extended Day</option>
-            <option value="before-after-care">School Age Before &amp; After Care</option>
-            <option value="summer-camp">Summer Camp</option>
-          </select>
+          <label for="child">Child's Age / Program Interest</label>
+          <input type="text" id="child" name="child" placeholder="e.g. 3-year-old, Preschool" />
         </div>
         <div class="form-group">
           <label for="message">Message</label>
@@ -350,34 +323,10 @@
         <span class="logo-name">South Shore Children's Center</span>
         <span class="logo-sub">of West Islip, Inc.</span>
       </div>
-      <p class="footer-copy">© <script>document.write(new Date().getFullYear())</script> South Shore Children's Center of West Islip, Inc. All rights reserved.</p>
+      <p class="footer-copy">© 2025 South Shore Children's Center of West Islip, Inc. All rights reserved.</p>
     </div>
   </footer>
 
-  <script>
-    (function(){
-      var now=new Date(), year=now.getFullYear(), month=now.getMonth();
-      var startYear = month >= 8 ? year : year - 1;
-      var el=document.getElementById('school-year');
-      if(el) el.textContent = startYear + '–' + (startYear+1);
-    })();
-  </script>
-  <script>
-    (function(){
-      var t=document.querySelector('.menu-toggle'),n=document.getElementById('mobile-nav');
-      if(!t||!n)return;
-      t.addEventListener('click',function(){
-        t.classList.toggle('open');n.classList.toggle('open');
-        t.setAttribute('aria-expanded',n.classList.contains('open'));
-      });
-      n.querySelectorAll('a').forEach(function(a){
-        a.addEventListener('click',function(){
-          t.classList.remove('open');n.classList.remove('open');
-          t.setAttribute('aria-expanded','false');
-        });
-      });
-    })();
-  </script>
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
