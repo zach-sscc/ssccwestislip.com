@@ -138,7 +138,13 @@ nav a {
   letter-spacing: 0.02em;
   transition: color 0.15s;
 }
-nav a:hover { color: var(--green); }
+nav a:hover {
+  color: var(--green);
+  background: rgba(59,124,168,0.09);
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  margin: -0.25rem -0.6rem;
+}
 
 .nav-cta {
   font-size: 0.85rem;
@@ -551,11 +557,6 @@ a.logo { text-decoration: none; }
 
 /* === NAV DROPDOWN === */
 nav ul li { position: relative; }
-nav ul li.has-dropdown > a::after {
-  content: ' ▾';
-  font-size: 0.7em;
-  opacity: 0.6;
-}
 .nav-dropdown {
   display: none;
   position: absolute;
