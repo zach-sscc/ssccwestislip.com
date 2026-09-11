@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="stylesheet" href="main.css?v=5" />
+  <link rel="stylesheet" href="main.css?v=6" />
 </head>
 <body>
 
@@ -22,7 +22,15 @@
       <nav>
         <ul>
           <li><a href="about.html">About</a></li>
-          <li><a href="programs.html">Programs</a></li>
+          <li class="has-dropdown"><a href="programs.html">Programs</a>
+            <ul class="nav-dropdown">
+              <li><a href="programs.html#infant">Infant Care</a></li>
+              <li><a href="programs.html#toddler">Toddler</a></li>
+              <li><a href="programs.html#preschool">Preschool</a></li>
+              <li><a href="programs.html#upk">Pre-K &amp; UPK</a></li>
+              <li><a href="programs.html#aftercare">Before &amp; After Care</a></li>
+            </ul>
+          </li>
           <li><a href="enrollment.html">Enrollment</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -33,7 +41,15 @@
   <div class="mobile-nav" id="mobile-nav">
     <ul>
       <li><a href="about.html">About</a></li>
-      <li><a href="programs.html">Programs</a></li>
+      <li class="has-dropdown"><a href="programs.html">Programs</a>
+            <ul class="nav-dropdown">
+              <li><a href="programs.html#infant">Infant Care</a></li>
+              <li><a href="programs.html#toddler">Toddler</a></li>
+              <li><a href="programs.html#preschool">Preschool</a></li>
+              <li><a href="programs.html#upk">Pre-K &amp; UPK</a></li>
+              <li><a href="programs.html#aftercare">Before &amp; After Care</a></li>
+            </ul>
+          </li>
       <li><a href="enrollment.html">Enrollment</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="contact.html" class="mobile-nav-cta">Schedule a Tour</a></li>
@@ -63,8 +79,8 @@
       <h1>Where Every Child<br /><em>Begins to Flourish</em></h1>
       <p class="hero-sub">Nurturing early education and care for infants through grade 5 — in a warm, enriching environment your family can trust.</p>
       <div class="hero-actions">
-        <a href="#enrollment" class="btn btn-sand">Now Enrolling</a>
-        <a href="#about" class="btn btn-ghost">Learn More</a>
+        <a href="contact.html" class="btn btn-sand">Schedule a Tour</a>
+        <a href="programs.html" class="btn btn-ghost">Explore Our Programs</a>
       </div>
     </div>
   </section>
@@ -117,9 +133,9 @@
         </div>
         <div class="about-text fade-up d1">
           <p class="eyebrow">Our Story</p>
-          <h2>A Foundation Built on<br />Trust &amp; Care</h2>
-          <p>South Shore Children's Center of West Islip has proudly served families in our community for many years, providing a safe, nurturing, and engaging environment where children can learn, grow, and build confidence. We recognize the importance of the early childhood years and are committed to creating meaningful experiences that support each child's development, curiosity, and individual strengths.</p>
-          <p>Our dedicated staff creates an environment that blends nurturing warmth with purposeful learning, giving every child the confidence and skills to thrive now and in the years ahead.</p>
+          <h2>Serving West Islip<br />Families Since 1999</h2>
+          <p>Founded in 1999, South Shore Children's Center has grown into one of the most trusted early childhood programs on Long Island — with 5,000+ students nurtured over 25 years, 350+ children enrolled annually, and a team that has been part of the West Islip community for generations.</p>
+          <p>We believe the early years are the most important years. Our educators, curriculum, and culture are built around that conviction — giving every child a warm, structured foundation they carry with them for life.</p>
           <a href="about.html" class="btn btn-primary">Meet Our Team</a>
         </div>
       </div>
@@ -178,12 +194,12 @@
       <h2 class="center fade-up d1">Programs for Every Stage</h2>
       <div class="programs-grid">
         <div class="program-card fade-up">
-<div class="program-age">6 weeks – 12 mo.</div>
+<div class="program-age">6 weeks – 18 months</div>
           <h3>Infant Care</h3>
           <p>Gentle, attentive care in a calm nursery environment designed to nurture your baby's earliest development.</p>
         </div>
         <div class="program-card fade-up d1">
-<div class="program-age">1 – 2 years</div>
+<div class="program-age">1.5 – 2+ years</div>
           <h3>Toddler Time</h3>
           <p>Exploration and discovery through sensory play, movement, and meaningful social experiences.</p>
         </div>
@@ -376,6 +392,19 @@
           t.setAttribute('aria-expanded','false');
         });
       });
+      // Mobile Programs dropdown toggle
+      var ddTrigger = n.querySelector('.has-mobile-dropdown > a');
+      if(ddTrigger){
+        ddTrigger.addEventListener('click',function(e){
+          var li = ddTrigger.closest('.has-mobile-dropdown');
+          var sub = li.querySelector('.mobile-sub');
+          if(sub){
+            e.preventDefault();
+            li.classList.toggle('open');
+            sub.classList.toggle('open');
+          }
+        });
+      }
     })();
   </script>
   <script>

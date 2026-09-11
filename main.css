@@ -140,10 +140,10 @@ nav a {
 }
 nav a:hover {
   color: var(--green);
-  background: rgba(59,124,168,0.09);
-  border-radius: 4px;
-  padding: 0.25rem 0.6rem;
-  margin: -0.25rem -0.6rem;
+  background: rgba(59,124,168,0.14);
+  border-radius: 6px;
+  padding: 1rem 1.4rem;
+  margin: -1rem -1.4rem;
 }
 
 .nav-cta {
